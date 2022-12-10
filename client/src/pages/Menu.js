@@ -8,7 +8,7 @@ function Menu() {
 
   const [pizza, setPizza] = useState([])
   useEffect(()=>{
-    fetch('/pizzas')
+    fetch('/pizzeria')
     .then(resp => resp.json())
     .then(pizzas => setPizza(pizzas))
   }, [])
