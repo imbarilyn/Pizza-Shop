@@ -1,24 +1,46 @@
-# README
+# Pizzeria eDuka Pizza-Shop Project.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The project aims at allowing users to make reviews on pizza sold in the online shop. One can log in and make reviews on a given pizza by pressing on the review button.
 
-Things you may want to cover:
+[Technology Used](#languagess)
+[License](#license)
+[Authors Info](#author)
 
-* Ruby version
 
-* System dependencies
+## Languages used
+### Frontend 
+HTML5
+React Javascript
+CSS
 
-* Configuration
+### Backend
+Ruby
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Bugs
 
-* Deployment instructions
+There is no bugs but it is open for advancement and improvements. Especially on the buying feature.
 
-* ...
+## Contributions
+Any contributions are very much welcomed. The project is at it's initial stages though, you can fork and contribute.
+
+## Set up directions
+
+You ca use either the SSH or HTTPS to clone for contributions to your local pc. Below are the links
+
+SSH: ` git clone git@github.com:imbarilyn/Pizza-Shop.git`
+
+HTTPS: `git clone https://github.com/imbarilyn/Pizza-Shop.git`
+
+## Live site
+
+### Project available Here: (`pizzeria-4th7.onrender.com`)
+
+
+## Author 
+[Linah Muhonja Imbari](https://github.com/imbarily)
+
+
+
