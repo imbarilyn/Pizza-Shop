@@ -8,6 +8,7 @@ import LoginForm from './components/LoginForm'
 import Login from './pages/Login'
 import Menu from './pages/Menu'
 import SignupForm from './components/SignupForm'
+import ReviewForm from './components/ReviewForm';
 
 function App() {
   const [user,setUser] = useState(null)
@@ -34,6 +35,7 @@ function App() {
         <Route path = '/login' element = {<LoginForm />} />
         <Route path='/menu' element ={<Menu />} />
         <Route path='/sign_up' element={<SignupForm />}/>
+        <Route path='/review_form' element = {<ReviewForm />}/>
       </Routes>
     </div>
   )

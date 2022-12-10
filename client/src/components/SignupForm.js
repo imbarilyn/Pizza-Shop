@@ -36,9 +36,9 @@ function SignupForm({ onLogin }) {
 
   return (
     <div className='wrapper' >
-    <form class="container" onSubmit={handleSubmit}>
-      <p class="heading">Sign up</p>
-      <div class="box">
+    <form className="container" onSubmit={handleSubmit}>
+      <p className="heading">Sign up</p>
+      <div className="box">
         <p>Username</p>
         <div>
           <input 
@@ -51,7 +51,7 @@ function SignupForm({ onLogin }) {
           /> 
         </div>
       </div>
-      <div class="box">
+      <div className="box">
         <p>Password</p>
         <div>
           <input 
@@ -64,7 +64,7 @@ function SignupForm({ onLogin }) {
           />
         </div>
       </div>
-      <div class="box">
+      <div className="box">
         <p>Confirm Password</p>
         <div>
           <input 
