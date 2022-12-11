@@ -22,7 +22,7 @@ function App() {
   }, []);
 
   if (!user){
-    <Login onLogin = {setUser} />
+    <LoginForm onLogin = {setUser} />
   }
 
   return (
@@ -32,7 +32,7 @@ function App() {
       
       <Routes>
         <Route path='/' element = {<Home />}/>
-        <Route path = '/login' element = {<LoginForm />} />
+        <Route path = '/login' element = {<Login />} />
         <Route path='/menu' element ={<Menu />} />
         <Route path='/sign_up' element={<SignupForm />}/>
         <Route path='/review_form' element = {<ReviewForm />}/>

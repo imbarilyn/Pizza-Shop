@@ -2,22 +2,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("../assets/pexels-pixabay-315755.jpg");
+    /* background-image: url("../assets/pexels-pixabay-315755.jpg");
     background-size: cover;
-    height: 100vh;
+    height: 100vh; */
    
    
 }
 .container{
     background:rgb(15,15,15);
     width:300px;
-    height:380px;
+    height:420px;
     border-radius:10px;
+    margin-top: 40px;
     display:flex;
     justify-content:center;
     flex-direction:column;
     color:#fff;
-    padding:2em;      
+    padding:3em;      
 }
 .heading{
     font-size:2em;

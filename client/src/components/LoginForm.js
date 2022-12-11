@@ -7,13 +7,11 @@ function LoginForm({ onLogin }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
 
     const navigate  = useNavigate()
   
     function handleSubmit(e) {
       e.preventDefault();
-      setIsLoading(true);
       fetch("/login", {
         method: "POST",
         headers: {
@@ -21,7 +19,7 @@ function LoginForm({ onLogin }) {
         },
         body: JSON.stringify({ username, password }),
       }).then((r) => {
-        setIsLoading(false);
+        
         if (r.ok) {
           r.json().then((user) => onLogin(user));
         } else {
@@ -31,6 +29,7 @@ function LoginForm({ onLogin }) {
     }
   
     return (
+
         <div className='wrapper' >
         <form className="container" onSubmit={handleSubmit}>
           <p className="heading">Login</p>
@@ -60,8 +59,10 @@ function LoginForm({ onLogin }) {
               />
             </div>
           </div>
-          <button type="submit" className = "loginBtn" onClick={()=> navigate('/menu')} >Login</button>
-          <Link to= "/sign_up" >Sign up</Link>
+          <button type="submit" className = "loginBtn">Login</button>
+          {errors.map((err) => (
+            <p>{err}</p>
+          ))}
         </form>       
       </div> 
     );

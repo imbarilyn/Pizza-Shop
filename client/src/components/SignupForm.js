@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import Error from '../pages/Error'
+import '../styles/Login.css'
+
 
 
 
@@ -8,12 +9,11 @@ function SignupForm({ onLogin }) {
     const [password, setPassword] = useState("")
     const [passwordConfirmation, setPasswordConfirmation] = useState("")
     const [errors, setErrors] =useState([])
-    const [isLoading, setIsLoading] = useState(false)
+    
 
     function handleSubmit(e){
         e.preventDefault();
         setErrors([])
-        setIsLoading(true);
         fetch("/signup", {
             method: "POST",
             headers: {
@@ -22,12 +22,11 @@ function SignupForm({ onLogin }) {
             body: JSON.stringify({username, password, password_confirmation: passwordConfirmation}) 
             
         }).then(resp=>{
-            setIsLoading(false);
             if(resp.ok){
                 resp.json().then(user=> onLogin(user));
             }
             else{
-                resp.json().then(e => console.log(e.value))
+                resp.json().then(e => setErrors(e.errors))
             }
         });
     }
@@ -77,8 +76,10 @@ function SignupForm({ onLogin }) {
           />
         </div>
       </div>
-      <button type="submit" className = "loginBtn">{isLoading? "isLoading...": "Signup"}</button>
-      
+      <button type="submit" className = "loginBtn">Sign up</button>
+      {errors.map((err)=> (
+        <p>{err}</p>
+      ))}
       
     </form>       
   </div> 
