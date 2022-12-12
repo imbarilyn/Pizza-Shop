@@ -36,7 +36,7 @@ HTTPS: `git clone https://github.com/imbarilyn/Pizza-Shop.git`
 
 ## Live site
 
-### Project available Here: (`https://pizza-yako.onrender.com`)
+### Project available Here: (`https://pizza-yetu-sote.onrender.com`)
 
 
 ## Author 
