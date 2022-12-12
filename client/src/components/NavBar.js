@@ -5,9 +5,11 @@ import '../styles/NavBar.css'
 import ReorderIcon from '@material-ui/icons/Reorder';
 import { Badge } from '@material-ui/core'
 import { ShoppingCartOutlined} from  '@material-ui/icons'
+import { useNavigate } from 'react-router-dom';
 
 function NavBar({ user }) {
   const [openLinks, setOpenLinks] = useState(false)
+  const navigate = useNavigate();
 
   return (
     <div className='navbar'>
@@ -32,7 +34,7 @@ function NavBar({ user }) {
           )
           }
           <Badge badgeContent={3} color="primary">
-            <ShoppingCartOutlined style={{color: "white"}} />
+            <ShoppingCartOutlined style={{color: "white"}} onClick = {() => navigate("/menu")}/>
           </Badge>
 
           <button onClick={() => setOpenLinks(!openLinks)}>
